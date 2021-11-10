@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  mips:
+    container_name: mips-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 65535:65535
+    environment:
+      - CHOKIDAR_USEPOLLING=true

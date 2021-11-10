@@ -1,0 +1,14 @@
+# 源代码
+src
+examples
+
+# webpack 的配置文件
+.webpack/*
+
+# 不需要参与打包的配置文件
+.babelrc
+.gitignore
+.eslintignore
+rollup.config.js
+tsconfig.json
+typings.d.ts

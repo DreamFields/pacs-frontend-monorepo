@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  mips:
+    container_name: mips-frontend-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+
+    ports:
+      - '65535:65535'
+    # volumes:
+    #   - ./config/nginx.conf:/etc/nginx/nginx.conf:ro

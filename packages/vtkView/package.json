@@ -1,0 +1,41 @@
+{
+  "name": "rayplus-vtkview",
+  "version": "0.0.14",
+  "description": "> TODO: description",
+  "author": "Alexiusll <linkenzone@163.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "./dist/umd/vtkView.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@218.4.143.148:RayPlus/pacs-frontend-monorepo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "compile": "rollup -c",
+    "dev": "webpack serve --config .webpack/webpack.config.js --mode development --env development",
+    "build": "build:prod",
+    "build:dev": "webpack --config .webpack/webpack.config.js"
+  },
+  "dependencies": {
+    "@kitware/vtk.js": "^18.4.1",
+    "antd": "^4.13.0",
+    "axios": "0.21.4",
+    "axios-retry": "^3.1.9",
+    "itk": "^14.1.1",
+    "vtk.js": "^18.4.1",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
+    "react-resize-detector": "^6.6.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "gitHead": "84f769c5204cf96e492b561f036f4a3e556dd606"
+}

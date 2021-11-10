@@ -1,0 +1,103 @@
+{
+  "name": "rayplus-pacs-frontend",
+  "version": "0.0.14",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz",
+    "release": "standard-version",
+    "dev": "npm run start:dev",
+    "start": "cross-env REACT_APP_ENV=dev UMI_ENV=dev umi dev",
+    "start:dev": "cross-env REACT_APP_ENV=dev UMI_ENV=dev MOCK=none umi dev",
+    "start:prod": "cross-env REACT_APP_ENV=prod UMI_ENV=prod MOCK=none umi dev",
+    "build": "umi build",
+    "build:dev": "cross-env REACT_APP_ENV=dev UMI_ENV=dev umi build --max_old_space_size=4096",
+    "build:prod": "cross-env REACT_APP_ENV=prod UMI_ENV=prod umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "analyze": "cross-env ANALYZE=1 umi build",
+    "openapi": "umi openapi",
+    "test": "umi test",
+    "test:all": "node ./tests/run-tests.js",
+    "test:component": "umi test ./src/components",
+    "test:coverage": "umi-test --coverage",
+    "dvalist": "umi dva list model"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://218.4.143.148/RayPlus/mips-fontend.git"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.5.0",
+    "@ant-design/pro-layout": "^6.14.5",
+    "@ant-design/pro-table": "^2.30.3",
+    "@kitware/vtk.js": "^18.4.0",
+    "@types/js-cookie": "^2.2.6",
+    "@umijs/openapi": "^1.1.17",
+    "@umijs/plugin-openapi": "^1.3.0",
+    "antd": "^4.13.0",
+    "axios": "^0.21.1",
+    "axios-retry": "^3.1.9",
+    "cornerstone-core": "^2.3.0",
+    "cornerstone-math": "^0.1.9",
+    "cornerstone-tools": "^5.1.3",
+    "cornerstone-wado-image-loader": "^3.3.1",
+    "cornerstone-web-image-loader": "^2.1.1",
+    "hammerjs": "^2.0.8",
+    "itk": "^14.1.1",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "rayplus-my-button": "^0.0.14",
+    "rayplus-three-view": "^0.0.14",
+    "rayplus-vtkview": "^0.0.14",
+    "react": "^17.0.2",
+    "react-color": "^2.19.3",
+    "react-cornerstone-viewport": "^4.0.5",
+    "react-dom": "^17.0.2",
+    "react-grid-layout": "1.2.4",
+    "react-resize-detector": "^6.6.4",
+    "react-vtk-js": "^1.5.4",
+    "react-vtkjs-viewport": "^0.14.2",
+    "umi": "3.4.20",
+    "umi-request": "^1.3.5"
+  },
+  "devDependencies": {
+    "@umijs/plugin-esbuild": "^1.1.0",
+    "@umijs/preset-react": "^1.8.10",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "6",
+    "css-loader": "5.2.1",
+    "lint-staged": "^10.5.4",
+    "postcss-loader": "3.0.0",
+    "raw-loader": "4.0.2",
+    "react-dev-inspector": "^1.5.1",
+    "style-loader": "2.0.0",
+    "webpack": "5.31.2",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2",
+    "webpack-merge": "5.7.3",
+    "worker-loader": "3.0.8",
+    "yorkie": "^2.0.0",
+    "konva": "^7.2.5",
+    "react-konva": "^17.0.1-3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}

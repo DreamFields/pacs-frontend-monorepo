@@ -1,0 +1,43 @@
+.imageViewerLoadingIndicator {
+  color: #91b9cd;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.imageViewerErrorLoadingIndicator {
+  color: #e29e4a;
+}
+
+.imageViewerErrorLoadingIndicator p,
+.imageViewerErrorLoadingIndicator h4 {
+  padding: 4px 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.imageViewerErrorLoadingIndicator p {
+  font-size: 11pt;
+}
+
+.loadingIndicator {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+}
+
+.loadingIndicator .indicatorContents {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+  transform: translateY(-50%);
+}

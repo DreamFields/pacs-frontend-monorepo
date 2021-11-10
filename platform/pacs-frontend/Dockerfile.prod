@@ -1,0 +1,23 @@
+# build environment
+FROM node:14 as build
+
+WORKDIR /app
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+# TODO：这里都改成 yarn 的方式好一点
+COPY package.json ./
+RUN npm install --silent
+RUN npm install react-scripts -g --silent
+
+COPY . .
+RUN npm run build
+
+# # production environment
+FROM nginx:latest
+COPY --from=build /app/dist /var/www
+
+COPY config/nginx.conf /etc/nginx/nginx.conf
+
+# EXPOSE 65535
+CMD ["nginx", "-g", "daemon off;"]

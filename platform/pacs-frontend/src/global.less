@@ -1,0 +1,49 @@
+// 全局样式文件
+// https://umijs.org/zh-CN/docs/assets-css
+
+// @import '~antd/es/style/themes/default.less';
+
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+
+@primary-color: #39bbdb; // 全局主色
+
+// 引入外部样式
+@import '~rayplus-my-button/dist/style.css';
+@import '~rayplus-three-view/dist/esm/style.css';
+@import '~rayplus-vtkview/dist/esm/style.css';
+
+//	屏幕 < 576px 响应式栅格
+@media (max-width: @screen-xs) {
+  .invisible-sm {
+    display: none !important;
+  }
+}
+// 表格表头样式
+.ant-table-thead > tr > th {
+  font-weight: 700 !important;
+  background-color: #39bbdb30 !important;
+}
+
+/* 修改滚动条样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #424242;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : #d1d1d1;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background   : #929292;
+}
+
+// body::-webkit-scrollbar {
+//   display: none;
+// }

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": ".",
+    "target": "es6",
+    "module": "es6",
+    "lib": ["es6", "dom"], // 编译过程中需要引入的库文件的列表
+    "moduleResolution": "node", // 决定如何处理模块
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "noImplicitReturns": true, // 是否默认禁用 any
+    "strict": false, // 	启用所有严格类型检查选项。
+    // "noImplicitThis": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true, // 	禁止对同一个文件的不一致的引用。
+    "suppressImplicitAnyIndexErrors": true, // 阻止--noImplicitAny对缺少索引签名的索引对象报错。
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
+    "skipLibCheck": true, //忽略所有的声明文件（*.d.ts）的类型检查
+    "declaration": true,
+    "declarationDir": "./dist/types"
+  },
+  "include": ["mock/**/*", "src/**/*", "config/**/*", ".umirc.ts", "typings.d.ts", "examples/**/*"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ]
+  // "types": ["typePatches"]
+}

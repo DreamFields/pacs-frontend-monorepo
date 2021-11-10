@@ -1,0 +1,9 @@
+node_modules
+
+/lambda/
+/scripts
+/config
+.history
+.eslintrc.js
+
+rollup.config.js
